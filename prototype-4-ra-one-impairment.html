@@ -174,7 +174,7 @@
                                         </table>
                                     </div>
                                     <div class="medium-12 small-12 large-12 cell">
-                                        <a class="button primary" style="margin-bottom: 0; float: right; margin-right: 0px;">Add patient impairment</a>
+                                        <a class="button primary" style="margin-bottom: 0; float: right; margin-right: 0px;" data-open="exampleModal3">Add patient impairment</a>
                                     </div>
                                 </div>
                             </div>
@@ -284,24 +284,78 @@
     </div>
 
 
-    <div class="reveal large ra-added" id="exampleModal3" data-reveal>
-
-        <div class="grid-x">
-            <div class="cell">
-                <br/>
-                <h3>Patient impairment successfully removed</h3><br/>
+    <div class="reveal large" id="exampleModal3" data-reveal>
+        <br/>
+        <h3>Add a patient impairment</h3><br/>
+        <h5>What are the patients impairments to be considered when making adjustments?</h5><br/>
+        <form>
+            <div class="large-6 cell">
+                <input type="checkbox" name="pokemon" value="learning" id="learning"><label for="learning">Learning disability(s)</label><br/>
+                <div id="reason-learning" class="large-6 medium-6 cell hide">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Autism" id="Autism"><label for="Autism">Autism</label><br/>
+                <div id="reason-autism" class="large-6 medium-6 cell hide">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Sensory" id="Sensory"><label for="Sensory">Sensory disability(s) - such as sight, hearing or verbal</label><br/>
+                <div id="reason-sensory" class="large-6 medium-6 cell hide">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Physical" id="Physical"><label for="Physical">Physical disability(s)</label><br/>
+                <div id="reason-physical" class="large-6 medium-6 cell hide">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Mental" id="Mental"><label for="Mental">Mental health condition</label><br/>
+                <div id="reason-mental" class="large-6 medium-6 cell hide">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Long" id="Long"><label for="Long">Long-term condition(s) - such as HIV, Dementia, Cancer or Multiple Scleroris</label><br/>
+                <div id="reason-long" class="large-6 medium-6 cell hide">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Other" id="Other"><label for="Other">Other condition(s) and/or disability(s)</label><br/>
+                <div id="reason-other" class="large-6 medium-6 cell hide">
+                    <label>Please provide more detail
+                    <input type="text" name="flavor">
+                </label>
+                </div>
+                <input type="checkbox" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Patient would prefer not to say</label><br/>
             </div>
-        </div>
-
-        <a class="button ghost" href="#" data-close>Close</a>
+        </form><br/>
+        <a class="button primary" data-open="flag-confirm">Next</a> &nbsp;
+        <a class="button ghost " href="#" data-open="exampleModal1">Back</a> &nbsp;
+        <a class="button ghost " href="#" data-close>Cancel</a>
 
         <button class="close-button" data-close aria-label="Close modal" type="button">
     <span aria-hidden="true">&times;</span>
   </button>
     </div>
 
+    <div class="reveal large" id="flag-confirm" data-reveal>
+        <br/>
+        <h3>Please confirm you wish to add the patient impairment</h3><br/>
+        <p>Please be aware any information entered in the flag will be shared nationally</p><br/>
+        <a class="button primary" href="prototype-4-ra.html">Yes, I wish to add this patient impairment</a> &nbsp;
+        <a class="button ghost " href="#" data-open="exampleModal3">Back</a> &nbsp;
+        <a class="button ghost " href="#" data-close>Cancel</a>
 
-
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
 
 
     <script src="js/vendor/jquery.js"></script>
